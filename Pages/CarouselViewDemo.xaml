@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiCollectionControls.Pages.CarouselViewDemo"
+             Title="Carousel View Demo">
+    <VerticalStackLayout>
+        <CarouselView x:Name="carouselView" IndicatorView="indicatorView">
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <VerticalStackLayout  BackgroundColor="#E0E4FF" Padding="10">
+                        <Label FontSize="Medium" FontAttributes="Bold" HorizontalTextAlignment="Center" Text="{Binding Title}" />
+                        <Label FontSize="Small" HorizontalTextAlignment="Center" Text="{Binding Description}" />
+                    </VerticalStackLayout>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+
+        <IndicatorView x:Name="indicatorView" Margin="5" HorizontalOptions="Center" IndicatorColor="Green" SelectedIndicatorColor="Red" />
+
+        <Picker x:Name="picker" IsVisible="false" />
+    </VerticalStackLayout>
+</ContentPage>
